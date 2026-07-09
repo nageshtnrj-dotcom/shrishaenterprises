@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Bamboo &amp; Banana Saplings | Shrisha Enterprises</title>
+<meta name="description" content="Order tissue-culture bamboo and banana saplings in bulk from Shrisha Enterprises. Beema, Balcooa, Tulda bamboo and Grand Naine, Red, Nendran banana varieties.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img src="images/brand/logo.jpg" alt="Shrisha Enterprises logo"></span>
+      <span><span class="brand-text">Shrisha Enterprises</span><span class="brand-sub">Agro Traders · Tissue Culture</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact &amp; Order</a>
+    </div>
+    <button class="nav-cart" data-open-cart aria-label="Open cart">
+      Cart <span class="count" data-cart-count>0</span>
+    </button>
+    <button class="nav-toggle" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb">HOME / PRODUCTS</div>
+    <h1>Tissue-culture saplings, priced for plantation-scale orders.</h1>
+    <p>All prices are per unit for orders at or above the minimum order quantity (MOQ). Add saplings to your cart, then send the order straight to us over WhatsApp or email from the contact page.</p>
+  </div>
+</header>
+
+<div class="culm-rule" aria-hidden="true">
+  <svg viewBox="0 0 1200 14" preserveAspectRatio="none"><line x1="0" y1="7" x2="1200" y2="7" stroke="#8B5A3D" stroke-opacity="0.3" stroke-width="1"/>
+    <g fill="#D9A441"><circle cx="30" cy="7" r="3.5"/><circle cx="200" cy="7" r="3.5"/><circle cx="370" cy="7" r="3.5"/><circle cx="540" cy="7" r="3.5"/><circle cx="660" cy="7" r="3.5"/><circle cx="830" cy="7" r="3.5"/><circle cx="1000" cy="7" r="3.5"/><circle cx="1170" cy="7" r="3.5"/></g>
+  </svg>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tabs">
+      <button class="tab active" data-filter="all">All saplings</button>
+      <button class="tab" data-filter="bamboo" id="bamboo">Bamboo</button>
+      <button class="tab" data-filter="banana" id="banana">Banana</button>
+    </div>
+    <div class="card-grid-2" id="product-grid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-bottom">
+    <span>© 2026 Shrisha Enterprises. All rights reserved.</span>
+    <span>Bengaluru, Karnataka, India</span>
+  </div>
+</footer>
+
+<div class="cart-overlay"></div>
+<div class="cart-drawer">
+  <div class="cart-head"><h3>Your cart</h3><button class="cart-close" aria-label="Close cart">&times;</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span>Estimated total</span><strong data-cart-total>₹0</strong></div>
+    <a href="contact.html" class="btn btn-primary btn-block">Proceed to order</a>
+  </div>
+</div>
+
+<script src="js/cart.js"></script>
+<script>
+  function renderGrid(filter){
+    const list = filter === "all" ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
+    document.getElementById("product-grid").innerHTML = list.map(p => `
+      <div class="produce-card">
+        <div class="produce-art">
+          <div class="produce-tag">${p.tag}</div>
+          <img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div class="produce-body">
+          <h3>${p.name}</h3>
+          <div class="sci">${p.sci}</div>
+          <p class="desc">${p.desc}</p>
+          <p class="note">MOQ ${p.moq} ${p.unit}s</p>
+          <div class="produce-meta">
+            <div class="produce-price">₹${p.price} <span>/ ${p.unit}</span></div>
+            <span class="mono" style="font-size:0.72rem; letter-spacing:0.06em; color:var(--bamboo); text-transform:uppercase;">Enquire now ✓</span>
+          </div>
+          <div class="produce-actions">
+            <div class="qty-stepper">
+              <button type="button" onclick="stepQty('${p.id}',-1)">−</button>
+              <input type="number" min="1" value="${p.moq}" id="qty-${p.id}">
+              <button type="button" onclick="stepQty('${p.id}',1)">+</button>
+            </div>
+            <button class="btn btn-dark btn-small" style="flex:1" onclick="addFromGrid('${p.id}')">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  function stepQty(id, dir){
+    const input = document.getElementById(`qty-${id}`);
+    const p = PRODUCTS.find(p=>p.id===id);
+    let val = parseInt(input.value || p.moq, 10) + dir*10;
+    if(val < 1) val = 1;
+    input.value = val;
+  }
+  function addFromGrid(id){
+    const input = document.getElementById(`qty-${id}`);
+    const qty = Math.max(1, parseInt(input.value, 10) || 1);
+    addToCart(id, qty);
+  }
+
+  document.querySelectorAll(".tab").forEach(tab=>{
+    tab.addEventListener("click", ()=>{
+      document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+      tab.classList.add("active");
+      renderGrid(tab.dataset.filter);
+    });
+  });
+
+  // open with hash filter if present (#bamboo / #banana)
+  const hash = window.location.hash.replace("#","");
+  if(hash === "bamboo" || hash === "banana"){
+    document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active", t.dataset.filter === hash));
+    renderGrid(hash);
+  } else {
+    renderGrid("all");
+  }
+</script>
+</body>
+</html>

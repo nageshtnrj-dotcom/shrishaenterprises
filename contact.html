@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Place an Order | Shrisha Enterprises</title>
+<meta name="description" content="Get in touch with Shrisha Enterprises or place a bulk order for bamboo and banana tissue-culture saplings via WhatsApp or email.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img src="images/brand/logo.jpg" alt="Shrisha Enterprises logo"></span>
+      <span><span class="brand-text">Shrisha Enterprises</span><span class="brand-sub">Agro Traders · Tissue Culture</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact &amp; Order</a>
+    </div>
+    <button class="nav-cart" data-open-cart aria-label="Open cart">
+      Cart <span class="count" data-cart-count>0</span>
+    </button>
+    <button class="nav-toggle" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb">HOME / CONTACT &amp; ORDER</div>
+    <h1>Review your order and send it to us directly.</h1>
+    <p>Fill in your details below. Your cart will be attached automatically — you can send it over WhatsApp or email, whichever is easier.</p>
+  </div>
+</header>
+
+<div class="culm-rule" aria-hidden="true">
+  <svg viewBox="0 0 1200 14" preserveAspectRatio="none"><line x1="0" y1="7" x2="1200" y2="7" stroke="#8B5A3D" stroke-opacity="0.3" stroke-width="1"/>
+    <g fill="#D9A441"><circle cx="30" cy="7" r="3.5"/><circle cx="200" cy="7" r="3.5"/><circle cx="370" cy="7" r="3.5"/><circle cx="540" cy="7" r="3.5"/><circle cx="660" cy="7" r="3.5"/><circle cx="830" cy="7" r="3.5"/><circle cx="1000" cy="7" r="3.5"/><circle cx="1170" cy="7" r="3.5"/></g>
+  </svg>
+</div>
+
+<section class="section">
+  <div class="wrap" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:44px; align-items:start;">
+    <div>
+      <h2 style="font-size:1.5rem; margin-bottom:22px;">Your order details</h2>
+      <div id="order-summary" style="margin-bottom:28px;"></div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input type="text" id="f-name" placeholder="e.g. Ramesh Gowda">
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone number</label>
+          <input type="tel" id="f-phone" placeholder="e.g. 98765 43210">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-place">Delivery location (village / town, district)</label>
+        <input type="text" id="f-place" placeholder="e.g. Chikkaballapur, Karnataka">
+      </div>
+      <div class="field">
+        <label for="f-notes">Notes (planting window, transport preference, etc.)</label>
+        <textarea id="f-notes" placeholder="Anything we should know before quoting delivery"></textarea>
+      </div>
+
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:8px;">
+        <button class="btn btn-primary" data-checkout-btn onclick="submitOrder('whatsapp')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.3.7-1.4 1.3-2 1.4-.5.1-1.1.2-3.5-.7-3-1.2-4.9-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.6-.2.2-.4.4-.2.7.2.4 1 1.6 2.1 2.6 1.4 1.3 2.6 1.7 3 1.9.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.4.5-.3.8-.2.3.1 1.9.9 2.3 1.1.4.2.6.3.7.4.1.2.1.9-.2 1.6z"/></svg>
+          Send order via WhatsApp
+        </button>
+        <button class="btn btn-outline" data-checkout-btn onclick="submitOrder('email')">Send order via email</button>
+      </div>
+      <p class="note" style="margin-top:14px;">Prices shown are indicative. We'll confirm final pricing and delivery cost once we've spoken with you.</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:20px;">
+      <div class="info-card">
+        <h4>Call or WhatsApp</h4>
+        <p><a href="tel:+919482977380">+91 94829 77380</a></p>
+      </div>
+      <div class="info-card">
+        <h4>Email</h4>
+        <p><a href="mailto:enquiry@shrishaenterprises.com">enquiry@shrishaenterprises.com</a></p>
+      </div>
+      <div class="info-card">
+        <h4>Nursery &amp; office address</h4>
+        <p>Urvija, 50, 10th Cross,<br>Balaji Krupa Layout, Hegde Nagar,<br>Bengaluru 560077, Karnataka, India</p>
+      </div>
+      <div class="map-frame" style="height:220px;">
+        <iframe src="https://www.google.com/maps?q=Balaji+Krupa+Layout,+Hegde+Nagar,+Bengaluru+560077&output=embed" loading="lazy" title="Map to Shrisha Enterprises"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-bottom">
+    <span>© 2026 Shrisha Enterprises. All rights reserved.</span>
+    <span>Bengaluru, Karnataka, India</span>
+  </div>
+</footer>
+
+<div class="cart-overlay"></div>
+<div class="cart-drawer">
+  <div class="cart-head"><h3>Your cart</h3><button class="cart-close" aria-label="Close cart">&times;</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span>Estimated total</span><strong data-cart-total>₹0</strong></div>
+    <a href="products.html" class="btn btn-outline btn-block">Add more saplings</a>
+  </div>
+</div>
+
+<script src="js/cart.js"></script>
+<script>
+  function renderOrderSummary(){
+    const cart = getCart();
+    const entries = Object.entries(cart);
+    const el = document.getElementById("order-summary");
+    if(entries.length === 0){
+      el.innerHTML = `<div class="info-card">Your cart is empty. <a href="products.html" style="text-decoration:underline;">Browse saplings</a> and add quantities before sending an order.</div>`;
+      return;
+    }
+    el.innerHTML = `<div class="info-card">
+      ${entries.map(([id,qty])=>{
+        const p = PRODUCTS.find(p=>p.id===id);
+        if(!p) return "";
+        return `<div style="display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed var(--line-light);">
+          <span>${p.name} <span class="mono note">× ${qty}</span></span>
+          <span class="mono">₹${qty*p.price}</span>
+        </div>`;
+      }).join("")}
+      <div style="display:flex; justify-content:space-between; padding-top:14px; font-weight:600;">
+        <span>Total</span><span class="mono">₹${cartTotal()}</span>
+      </div>
+    </div>`;
+  }
+
+  function submitOrder(channel){
+    const name = document.getElementById("f-name").value.trim();
+    const phone = document.getElementById("f-phone").value.trim();
+    const place = document.getElementById("f-place").value.trim();
+    const notes = document.getElementById("f-notes").value.trim();
+    if(cartCount() === 0){
+      showToast("Add at least one sapling to your cart first");
+      return;
+    }
+    if(channel === "whatsapp"){
+      sendOrderWhatsapp(name, phone, place, notes);
+    } else {
+      sendOrderEmail(name, phone, place, notes);
+    }
+  }
+
+  renderOrderSummary();
+  document.addEventListener("DOMContentLoaded", renderOrderSummary);
+  window.addEventListener("storage", renderOrderSummary);
+</script>
+</body>
+</html>
