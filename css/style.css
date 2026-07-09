@@ -180,8 +180,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .trust-num{ font-family:var(--f-display); font-style:italic; font-size:1.9rem; color:var(--turmeric); }
 .trust-label{ font-size:0.8rem; color:var(--text-light-dim); margin-top:4px; }
 
+.hero-photo{
+  background-size:cover;
+  background-position:center;
+}
+.hero-grid-full{
+  grid-template-columns:1fr;
+  max-width:640px;
+}
 @media (max-width:860px){
   .hero-grid{ grid-template-columns:1fr; }
+  .hero-grid-full{ max-width:100%; }
   .trust-strip .wrap{ grid-template-columns:repeat(2,1fr); row-gap:22px; }
   .trust-item:nth-child(3){ border-left:none; padding-left:0; }
 }
