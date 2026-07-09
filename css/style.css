@@ -183,14 +183,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-photo{
   background-size:cover;
   background-position:center;
+  padding-bottom:0;
 }
-.hero-grid-full{
-  grid-template-columns:1fr;
+.hero-photo .hero-text-block{
   max-width:640px;
+  padding:20px 0 80px;
 }
 @media (max-width:860px){
   .hero-grid{ grid-template-columns:1fr; }
-  .hero-grid-full{ max-width:100%; }
   .trust-strip .wrap{ grid-template-columns:repeat(2,1fr); row-gap:22px; }
   .trust-item:nth-child(3){ border-left:none; padding-left:0; }
 }
