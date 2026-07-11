@@ -201,7 +201,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .section-dark{ background:var(--ink); color:var(--text-light); }
 .section-soft{ background:var(--paper-dim); }
 
-.section-head{ max-width:640px; margin-bottom:52px; }
+.section-head{ max-width:760px; margin-bottom:52px; }
 .section-head .eyebrow{ color:var(--clay); }
 .section-dark .section-head .eyebrow{ color:var(--turmeric); }
 .section-head h2{ font-size:clamp(1.9rem,3vw,2.6rem); }
@@ -354,7 +354,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background:var(--ink); color:var(--text-light); padding:56px 0 48px;
 }
 .page-hero h1{ font-size:clamp(2rem,3.6vw,2.9rem); color:var(--text-light); max-width:36ch; }
-.page-hero p{ color:var(--text-light-dim); margin-top:14px; max-width:56ch; }
+.page-hero p{ color:var(--text-light-dim); margin-top:14px; max-width:640px; }
 .breadcrumb{ font-family:var(--f-mono); font-size:0.76rem; color:var(--leaf); margin-bottom:16px; letter-spacing:0.04em; }
 
 .tabs{ display:flex; gap:8px; margin-bottom:36px; flex-wrap:wrap; }
