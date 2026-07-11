@@ -237,8 +237,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .produce-body{ padding:22px 24px 24px; display:flex; flex-direction:column; gap:12px; flex:1; }
 .produce-body h3{ font-size:1.3rem; }
 .produce-body .sci{ font-family:var(--f-display); font-style:italic; color:var(--text-soft); font-size:0.9rem; margin-top:-8px; }
-.produce-body p.desc{ color:var(--text-soft); font-size:0.93rem; flex:1; }
-.produce-meta{ display:flex; align-items:baseline; justify-content:space-between; padding-top:10px; border-top:1px dashed var(--line-light); }
+.produce-body p.desc{ color:var(--text-soft); font-size:0.93rem; }
+.produce-meta{ display:flex; align-items:baseline; justify-content:space-between; padding-top:10px; border-top:1px dashed var(--line-light); margin-top:auto; }
 .produce-price{ font-family:var(--f-mono); font-size:1.05rem; font-weight:600; color:var(--clay); }
 .produce-price span{ font-size:0.72rem; color:var(--text-soft); font-weight:400; }
 .produce-actions{ display:flex; gap:10px; margin-top:4px; }
