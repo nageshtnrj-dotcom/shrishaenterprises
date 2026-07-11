@@ -30,7 +30,7 @@
   --f-mono: "JetBrains Mono", monospace;
 
   /* ---- layout ---- */
-  --maxw: 1180px;
+  --maxw: 1440px;
   --edge: clamp(20px, 5vw, 64px);
   --radius: 4px;
 }
