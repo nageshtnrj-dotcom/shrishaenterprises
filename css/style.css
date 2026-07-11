@@ -141,7 +141,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero h1{
   font-size:clamp(2.5rem, 4.6vw, 4.1rem); line-height:1.03; color:var(--text-light);
-  max-width:30ch;
+  max-width:36ch;
 }
 .hero h1 em{ font-style:italic; color:var(--leaf); font-weight:500; }
 .hero p.lede{
@@ -186,7 +186,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   padding-bottom:0;
 }
 .hero-photo .hero-text-block{
-  max-width:820px;
+  max-width:1000px;
   padding:20px 0 80px;
 }
 @media (max-width:860px){
