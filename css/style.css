@@ -141,7 +141,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero h1{
   font-size:clamp(2.5rem, 4.6vw, 4.1rem); line-height:1.03; color:var(--text-light);
-  max-width:20ch;
+  max-width:30ch;
 }
 .hero h1 em{ font-style:italic; color:var(--leaf); font-weight:500; }
 .hero p.lede{
