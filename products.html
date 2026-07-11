@@ -45,7 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="breadcrumb">HOME / PRODUCTS</div>
     <h1>Tissue-culture saplings, priced for plantation-scale orders.</h1>
-    <p>All prices are per unit for orders at or above the minimum order quantity (MOQ). Add saplings to your cart, then send the order straight to us over WhatsApp or email from the contact page.</p>
+    <p>All prices are per unit for bulk plantation orders. Add saplings to your cart, then send the order straight to us over WhatsApp or email from the contact page.</p>
   </div>
 </header>
 
@@ -104,7 +104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="produce-actions">
             <div class="qty-stepper">
               <button type="button" onclick="stepQty('${p.id}',-1)">−</button>
-              <input type="number" min="1" value="${p.moq}" id="qty-${p.id}">
+              <input type="number" min="0" value="0" id="qty-${p.id}">
               <button type="button" onclick="stepQty('${p.id}',1)">+</button>
             </div>
             <button class="btn btn-dark btn-small" style="flex:1" onclick="addFromGrid('${p.id}')">Add to cart</button>
@@ -117,13 +117,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function stepQty(id, dir){
     const input = document.getElementById(`qty-${id}`);
     const p = PRODUCTS.find(p=>p.id===id);
-    let val = parseInt(input.value || p.moq, 10) + dir*10;
-    if(val < 1) val = 1;
+    let val = parseInt(input.value || 0, 10) + dir*10;
+    if(val < 0) val = 0;
     input.value = val;
   }
   function addFromGrid(id){
     const input = document.getElementById(`qty-${id}`);
-    const qty = Math.max(1, parseInt(input.value, 10) || 1);
+    const qty = parseInt(input.value, 10) || 0;
+    if(qty <= 0) return;
     addToCart(id, qty);
   }
 
