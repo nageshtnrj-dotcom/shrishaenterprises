@@ -211,7 +211,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ================= PRODUCT / FEATURE CARDS ================= */
 .card-grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
 .card-grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-.card-grid-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.card-grid-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
 
 .feature-card{
   background:var(--paper); border:1px solid var(--line-light); border-radius:var(--radius);
@@ -234,12 +234,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   letter-spacing:0.08em; text-transform:uppercase; background:var(--ink); color:var(--turmeric);
   padding:5px 9px; border-radius:2px;
 }
-.produce-body{ padding:22px 24px 24px; display:flex; flex-direction:column; gap:12px; flex:1; }
+.produce-body{ padding:22px 18px 24px; display:flex; flex-direction:column; gap:12px; flex:1; }
 .produce-body h3{ font-size:1.3rem; }
 .produce-body .sci{ font-family:var(--f-display); font-style:italic; color:var(--text-soft); font-size:0.9rem; margin-top:-8px; }
 .produce-body p.desc{ color:var(--text-soft); font-size:0.93rem; }
 .produce-meta{ display:flex; align-items:baseline; justify-content:space-between; padding-top:10px; border-top:1px dashed var(--line-light); margin-top:auto; }
-.produce-price{ font-family:var(--f-mono); font-size:1.05rem; font-weight:600; color:var(--clay); }
+.produce-price{ font-family:var(--f-mono); font-size:1.05rem; font-weight:600; color:var(--clay); white-space:nowrap; flex-shrink:0; }
 .produce-price span{ font-size:0.72rem; color:var(--text-soft); font-weight:400; }
 .produce-actions{ display:flex; gap:10px; margin-top:4px; }
 
@@ -353,7 +353,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .page-hero{
   background:var(--ink); color:var(--text-light); padding:56px 0 48px;
 }
-.page-hero h1{ font-size:clamp(2rem,3.6vw,2.9rem); color:var(--text-light); max-width:16ch; }
+.page-hero h1{ font-size:clamp(2rem,3.6vw,2.9rem); color:var(--text-light); max-width:36ch; }
 .page-hero p{ color:var(--text-light-dim); margin-top:14px; max-width:56ch; }
 .breadcrumb{ font-family:var(--f-mono); font-size:0.76rem; color:var(--leaf); margin-bottom:16px; letter-spacing:0.04em; }
 
