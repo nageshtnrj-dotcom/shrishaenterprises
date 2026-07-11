@@ -201,7 +201,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .section-dark{ background:var(--ink); color:var(--text-light); }
 .section-soft{ background:var(--paper-dim); }
 
-.section-head{ max-width:900px; margin-bottom:52px; }
+.section-head{ max-width:1050px; margin-bottom:52px; }
 .section-head .eyebrow{ color:var(--clay); }
 .section-dark .section-head .eyebrow{ color:var(--turmeric); }
 .section-head h2{ font-size:clamp(1.9rem,3vw,2.6rem); }
