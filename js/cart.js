@@ -21,8 +21,7 @@ const PRODUCTS = [
     desc: "Bambusa Balcooa is a premium commercial bamboo variety known for its thick-walled culms, vigorous growth, and strong long-term returns. Widely cultivated for construction, furniture, and agroforestry applications, it enjoys consistent industrial demand, making it an ideal choice for farmers seeking a profitable and sustainable plantation crop.",
     img: "images/products/balcooa.webp",
     price: 45,
-    unit: "sapling",
-    moq: 500
+    unit: "sapling"
   },
   {
     id: "bamboo-tulda",
@@ -33,8 +32,7 @@ const PRODUCTS = [
     desc: "Bambusa tulda, popularly known as Indian Timber Bamboo, is a fast-growing and highly versatile bamboo variety prized for its straight, durable culms. Strong demand from furniture, handicrafts, paper production, and plantation sectors makes it an excellent choice for growers seeking sustainable long-term returns.",
     img: "images/products/tulda.webp",
     price: 38,
-    unit: "sapling",
-    moq: 500
+    unit: "sapling"
   },
   {
     id: "banana-yelakki",
@@ -45,8 +43,7 @@ const PRODUCTS = [
     desc: "Yelakki Banana is a premium, high-value variety known for strong market demand and attractive price realization. With healthy growth, consistent yields, and excellent profitability potential, it is well suited for farmers looking to maximize returns from intensive banana cultivation.",
     img: "images/products/yelakki-banana.webp",
     price: 24,
-    unit: "plantlet",
-    moq: 500
+    unit: "plantlet"
   },
   {
     id: "banana-g9",
@@ -57,8 +54,7 @@ const PRODUCTS = [
     desc: "G9 Banana is a proven commercial variety favored by farmers for its high yield potential, uniform bunch quality, and reliable performance. Easy to manage and widely cultivated, it offers dependable harvests, excellent market acceptance and strong returns for both small and large-scale growers.",
     img: "images/products/g9-banana.webp",
     price: 22,
-    unit: "plantlet",
-    moq: 1000
+    unit: "plantlet"
   }
 ];
 
