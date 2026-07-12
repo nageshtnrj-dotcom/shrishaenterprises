@@ -145,7 +145,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .hero h1 em{ font-style:italic; color:var(--leaf); font-weight:500; }
 .hero p.lede{
-  margin-top:24px; font-size:1.1rem; color:var(--text-light-dim); max-width:680px; line-height:1.6;
+  margin-top:24px; font-size:1.1rem; color:var(--text-light-dim); max-width:none; line-height:1.6;
 }
 .hero-ctas{ display:flex; gap:14px; margin-top:36px; flex-wrap:wrap; }
 
