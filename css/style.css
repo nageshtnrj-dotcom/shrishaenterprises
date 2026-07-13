@@ -213,6 +213,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .card-grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .card-grid-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
 
+.supply-split{ display:grid; grid-template-columns:0.85fr 1.3fr 0.85fr; gap:32px; align-items:center; }
+.supply-split img{ max-width:320px; margin:0 auto; display:block; }
+@media (max-width:860px){
+  .supply-split{ grid-template-columns:1fr 1fr; gap:16px; row-gap:24px; }
+  .supply-split > div:first-child{ order:1; }
+  .supply-split > div:nth-child(2){ order:0; grid-column:1 / -1; }
+  .supply-split > div:last-child{ order:2; }
+  .supply-split img{ max-width:100%; }
+}
+
 .feature-card{
   background:var(--paper); border:1px solid var(--line-light); border-radius:var(--radius);
   padding:30px 26px;
